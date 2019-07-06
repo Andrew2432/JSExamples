@@ -38,4 +38,24 @@ function sumInput() {
     alert(`The sum is ${sum}`);
 }
 
-sumInput();
+//  sumInput();
+
+
+
+//  Example 3
+//  Getting consecutive max sum 
+//  in an array
+function maxArraySum() {
+    let arr = [-1, 2, 3, -9, 11];
+    let partialSum = 0;
+    let maxSum = 0;
+
+    for( let item of arr ) {
+        partialSum += item;
+        maxSum = Math.max(partialSum, maxSum);
+        if ( partialSum < 0 ) partialSum = 0;
+    }
+    return maxSum;
+}
+
+log( maxArraySum() );
